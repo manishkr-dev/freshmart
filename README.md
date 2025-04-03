@@ -22,7 +22,29 @@
 
 ## 📸 Screenshots
 
-(Add your screenshots here)
+### 🏠 Home Page
+![Home Page](https://github.com/user-attachments/assets/3834940a-094e-42d6-8980-8c6b2e40e136)
+![Top Catogries](https://github.com/user-attachments/assets/17efdcdb-f305-4726-9e62-2272fe0d3ecd)
+
+### ❤️Wishlist Page
+![Wishlist](https://github.com/user-attachments/assets/a6537e7c-1870-4e83-a30f-eeb5ce5430ce)
+
+
+### 🛍️ Product Page
+![Wishlist](https://github.com/user-attachments/assets/a6537e7c-1870-4e83-a30f-eeb5ce5430ce)
+
+### 🛒 Cart Page
+![Cart Page](https://github.com/user-attachments/assets/0bd4ddda-cdbf-4f60-8e9b-562fc174fb47)
+
+### 🛍️ Checkout Page
+![Checkout](https://github.com/user-attachments/assets/acc1ca5f-c648-4681-9cc3-2fa0f67fe15e)
+
+### 📦 Order page
+![Order Page](https://github.com/user-attachments/assets/39494255-3c89-482d-b6b7-d26386a8d763)
+
+### 🔐 Login & Register page
+![Login & Register  page](https://github.com/user-attachments/assets/d15e61bb-95ed-47ea-b84b-1ae53ce2b28b)
+
 
 ## 🎯 How to Run Locally
 
