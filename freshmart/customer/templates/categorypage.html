@@ -1,0 +1,64 @@
+{% include 'base.html' %}
+
+<h2>Selected Product: {{ cat.product_name }}</h2> <!-- Display the selected product -->
+<p>Category: {{ cat.product_category }}</p>
+
+<!-- Display other products in the same category -->
+<section class="product-section">
+    <h3>Products in {{ cat.product_category }}</h3>
+    <ul>
+        {% for i in prod %}
+            <li>
+                <a class="dropdown-item" href="{% url 'categorypage' i.id %}">{{ i.product_name }}</a> 
+                <!-- You can add more product details here as needed -->
+            </li>
+        {% empty %}
+            <li>No products available.</li>
+        {% endfor %}
+    </ul>
+</section>
+
+<!-- New Product Arrivals Section -->
+<section class="new-arrivals-section">
+    <h3>New Product Arrivals</h3>
+    <ul>
+        {% for i in new_arrivals %}
+            <li>
+                <a href="{% url 'product-details' i.id %}">{{ i.product_name }}</a>
+                <span>Category: {{ i.product_category.genre }}</span>
+            </li>
+        {% empty %}
+            <li>No new arrivals available.</li>
+        {% endfor %}
+    </ul>
+</section>
+
+<!-- Trending Products Section -->
+<section class="trending-products-section">
+    <h3>Trending Products</h3>
+    <ul>
+        {% for i in trending_products %}
+            <li>
+                <a href="{% url 'product-details' i.id %}">{{ i.product_name }}</a>
+                <span>Category: {{ i.product_category.genre }}</span>
+            </li>
+        {% empty %}
+            <li>No trending products available.</li>
+        {% endfor %}
+    </ul>
+</section>
+
+<!-- Recent Products Section -->
+<section class="recent-products-section">
+    <h3>Recent Products</h3>
+    <ul>
+        {% for i in recent_products %}
+            <li>
+                <a href="{% url 'product-details' i.id %}">{{ i.product_name }}</a>
+                <span>Category: {{ i.product_category.genre }}</span>
+            </li>
+        {% empty %}
+            <li>No recent products available.</li>
+        {% endfor %}
+    </ul>
+</section>

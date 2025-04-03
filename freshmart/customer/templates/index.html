@@ -1,0 +1,2091 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static '/img/favicon/favicon.png' %}">
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- FontAwsome Icon css -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- owl carousel Theme css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.css">
+</head>
+
+<body class="home-content">
+    {% include 'navbar.html' %}
+    <!-- ---category-slider -->
+    <section class="cat-container my-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-between">
+                    <div class="owl-carousel owl-theme position-relative" id="cat-slider">
+                        <div class="cat-content d-flex column-gap-3 align-items-center ps-2">
+                            <div class="cat-thumb">
+                                <a class="cat-img-link" href="#" aria-label="Vegetables">
+                                    <img width="36" height="36" src="{% static 'img/Category-icons/1.png' %}" class=""
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="cat-title d-flex flex-column lh-lg">
+                                <h3 class="mb-0 fw-bold"><a class="text-dark text-decoration-none"
+                                        href="#">Vegetables</a></h3>
+                                <p class="mb-0 fw-semibold"><span class="total-count">7</span> Products</p>
+                            </div>
+                        </div>
+                        <div class="cat-content d-flex column-gap-3 align-items-center ps-2">
+                            <div class="cat-thumb">
+                                <a class="cat-img-link" href="#" aria-label="Chips & Namkeen's">
+                                    <img width="36" height="36" src="{% static 'img/Category-icons/chips.png' %}"
+                                        class="" alt="">
+                                </a>
+                            </div>
+                            <div class="cat-title d-flex flex-column lh-lg">
+                                <h3 class="mb-0 fw-bold"><a class="text-dark text-decoration-none" href="#">Chips &
+                                        Namkeen's</a></h3>
+                                <p class="mb-0 fw-semibold"><span class="total-count">7</span> Products</p>
+                            </div>
+                        </div>
+                        <div class="cat-content d-flex column-gap-3 align-items-center ps-2">
+                            <div class="cat-thumb">
+                                <a class="cat-img-link" href="#" aria-label="Drinks & Juices">
+                                    <img width="36" height="36" src="{% static 'img/Category-icons/soft-drink.png' %}"
+                                        class="" alt="">
+                                </a>
+                            </div>
+                            <div class="cat-title d-flex flex-column lh-lg">
+                                <h3 class="mb-0 fw-bold"><a class="text-dark text-decoration-none" href="#">Drinks &
+                                        Juices</a></h3>
+                                <p class="mb-0 fw-semibold"><span class="total-count">7</span> Products</p>
+                            </div>
+                        </div>
+                        <div class="cat-content d-flex column-gap-3 align-items-center ps-2">
+                            <div class="cat-thumb">
+                                <a class="cat-img-link" href="#" aria-label="Fresh Fruits">
+                                    <img width="36" height="36" src="{% static 'img/Category-icons/fruits.png' %}"
+                                        class="" alt="">
+                                </a>
+                            </div>
+                            <div class="cat-title d-flex flex-column lh-lg">
+                                <h3 class="mb-0 fw-bold"><a class="text-dark text-decoration-none" href="#">Fresh
+                                        Fruits</a></h3>
+                                <p class="mb-0 fw-semibold"><span class="total-count">7</span> Products</p>
+                            </div>
+                        </div>
+                        <div class="cat-content d-flex column-gap-3 align-items-center ps-2">
+                            <div class="cat-thumb">
+                                <a class="cat-img-link" href="#" aria-label="Dairy & Bakery">
+                                    <img width="36" height="36" src="{% static 'img/Category-icons/milk-box.png' %}"
+                                        class="" alt="">
+                                </a>
+                            </div>
+                            <div class="cat-title d-flex flex-column lh-lg">
+                                <h3 class="mb-0 fw-bold"><a class="text-dark text-decoration-none" href="#">Dairy &
+                                        Bakery</a></h3>
+                                <p class="mb-0 fw-semibold"><span class="total-count">7</span> Products</p>
+                            </div>
+                        </div>
+                        <div class="cat-content d-flex column-gap-3 align-items-center ps-2">
+                            <div class="cat-thumb">
+                                <a class="cat-img-link" href="#" aria-label="Toy's & Games">
+                                    <img width="36" height="36" src="{% static 'img/Category-icons/toys.png' %}"
+                                        class="" alt="">
+                                </a>
+                            </div>
+                            <div class="cat-title d-flex flex-column lh-lg">
+                                <h3 class="mb-0 fw-bold"><a class="text-dark text-decoration-none" href="#">Toy's &
+                                        Games</a></h3>
+                                <p class="mb-0 fw-semibold"><span class="total-count">7</span> Products</p>
+                            </div>
+                        </div>
+                        <div class="cat-content d-flex column-gap-3 align-items-center ps-2">
+                            <div class="cat-thumb">
+                                <a class="cat-img-link" href="#" aria-label="Skin Care & Lotion">
+                                    <img width="36" height="36" src="{% static 'img/Category-icons/cream.png' %}"
+                                        class="" alt="">
+                                </a>
+                            </div>
+                            <div class="cat-title d-flex flex-column lh-lg">
+                                <h3 class="mb-0 fw-bold"><a class="text-dark text-decoration-none" href="#">Skin Care &
+                                        Lotion</a></h3>
+                                <p class="mb-0 fw-semibold"><span class="total-count">7</span> Products</p>
+                            </div>
+                        </div>
+                        <div class="cat-content d-flex column-gap-3 align-items-center ps-2">
+                            <div class="cat-thumb">
+                                <a class="cat-img-link" href="#" aria-label="Stationary & Craft">
+                                    <img width="36" height="36" src="{% static 'img/Category-icons/stationary.png' %}"
+                                        class="" alt="">
+                                </a>
+                            </div>
+                            <div class="cat-title d-flex flex-column lh-lg">
+                                <h3 class="mb-0 fw-bold"><a class="text-dark text-decoration-none" href="#">Stationary &
+                                        Craft</a></h3>
+                                <p class="mb-0 fw-semibold"><span class="total-count">7</span> Products</p>
+                            </div>
+                        </div>
+                        <div class="cat-content d-flex column-gap-3 align-items-center ps-2">
+                            <div class="cat-thumb">
+                                <a class="cat-img-link" href="#" aria-label="Cleaning Essentials">
+                                    <img width="36" height="36" src="{% static 'img/Category-icons/cleaning.png' %}"
+                                        class="" alt="">
+                                </a>
+                            </div>
+                            <div class="cat-title d-flex flex-column lh-lg">
+                                <h3 class="mb-0 fw-bold"><a class="text-dark text-decoration-none" href="#">Cleaning
+                                        Essentials</a></h3>
+                                <p class="mb-0 fw-semibold"><span class="total-count">7</span> Products</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---------carousel-banner -->
+    <section class="mt-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="owl-carousel owl-theme slider-gallery" id="banner-slider">
+                        <div class="item">
+                            <div class="card">
+                                <img src="{% static 'img/banner-img/slide-banner-img-4.webp' %}" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{% static 'img/banner-img/slide-banner-img-6.webp' %}" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{% static 'img/banner-img/slide-banner-img-1.webp' %}" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{% static 'img/banner-img/slide-banner-img-8.webp' %}" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{% static 'img/banner-img/slide-banner-img-9.webp' %}" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{% static 'img/banner-img/slide-banner-img-3.webp' %}" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{% static 'img/banner-img/slide-banner-img-7.webp' %}" class="card-img-top">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card">
+                                <img src="{% static 'img/banner-img/slide-banner-img-2.webp' %}" class="card-img-top">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -----Product-card-section  -->
+    <section class="my-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-dark fw-bold">Recent Products</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme product-wrapper" id="product-slider">
+                        {% for i in featured_products %}
+                        <div class="item py-3">
+                            <div class="card rounded-4 position-relative product-card-list">
+                                {% if i.product_discountprice < i.product_orginalprice %}
+                                    <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">{{i.product_priceoff}}% OFF</span>
+                                {% endif %}
+                                <span class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                        class="fa-regular fa-heart"></i></span>
+                                <a href="{% url 'product-details' %}">
+                                    {% if i.product_img %}
+            
+                                    <img src="{{i.product_img.url}}" alt="" class="img-fluid product-card-img">
+                                    {% endif %}
+            
+                                </a>
+                                <div class="card-body product-body pt-0">
+                                    <h6 class="card-title product-name fw-bold text-truncate">{{i.product_name}} </h6>
+                                    {% comment %} <h6 class="card-title product-name fw-bold text-truncate">
+                                        {{i.product_category}} </h6> {% endcomment %}
+            
+                                    <div
+                                        class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                        <span class="product-weight small m-0">{{i.product_weight}}</span>
+                                        <div class="product-meta d-flex justify-content-start">
+                                            <div class="product-available in-stock">{{i.product_available}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                    <h6 class="fw-bold m-0">
+                                        ₹
+                                        {% if i.product_discountprice < i.product_orginalprice %}
+                                            {{ i.product_discountprice }} <del class="text-muted small fw-normal">₹{{ i.product_orginalprice }}</del>
+                                        {% else %}
+                                            {{ i.product_discountprice }}
+                                        {% endif %}
+                                    </h6>
+                                    <a href="#" class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                        tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                    <div
+                                        class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                        <button class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                class="fa-light fa-minus fw-bold"></i></button>
+                                        <div class="qty-count"></div>
+                                        <button class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                class="fa-light fa-plus fw-bold"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <p>No products available.</p>
+                        {% endfor %}
+
+                        
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---Top Category-- -->
+    <section class="top-cat-section my-5">
+        <div class="container-fluid">
+            <div class="row mx-3">
+                <div class="col-md-12 top-cat border-2 border-secondary border-success rounded-4">
+                    <div class="top-cat-title text-center">
+                        <h3 class="d-inline-block px-2 bg-white mb-4 text-dark fw-bold">Our Top Category</h3>
+                    </div>
+                    <div class="top-cat-content d-flex flex-wrap justify-content-center gap-3 mx-3 px-4">
+                        <div
+                            class="cat-animated-icon px-5 py-4 text-center border rounded-3 position-relative overflow-hidden">
+                            <div
+                                class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
+                                <img src="{% static 'img/Category-icons/dried-fruits.png' %}" width="90px" height="90px"
+                                    alt="flower" class="img-fluid">
+                            </div>
+                            <a href="#" class="text-dark fs-sm text-decoration-none fw-bold d-block mt-3">Dried
+                                Fruits</a>
+                            <span class="total-count position-relative ps-3 fs-sm fw-medium ">5
+                                Items</span>
+                        </div>
+                        <div
+                            class="cat-animated-icon px-5 py-4 text-center border rounded-3 position-relative overflow-hidden color-2">
+                            <div
+                                class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
+                                <img src="{% static 'img/Category-icons/wheat.png' %}" alt="flower" class="img-fluid">
+                            </div>
+                            <a href="#" class="text-dark fs-sm text-decoration-none fw-bold d-block mt-3">Rice &
+                                Cereals</a>
+                            <span class="total-count position-relative ps-3 fs-sm fw-medium ">5
+                                Items</span>
+                        </div>
+                        <div
+                            class="cat-animated-icon px-5 py-4 text-center border rounded-3 position-relative overflow-hidden color-3">
+                            <div
+                                class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
+                                <img src="{% static 'img/Category-icons/fruits-1.png' %}" alt="flower"
+                                    class="img-fluid">
+                            </div>
+                            <a href="#" class="text-dark fs-sm text-decoration-none fw-bold d-block mt-3">Fresh
+                                Fruits</a>
+                            <span class="total-count position-relative ps-3 fs-sm fw-medium ">5
+                                Items</span>
+                        </div>
+                        <div
+                            class="cat-animated-icon px-5 py-4 text-center border rounded-3 position-relative overflow-hidden color-4">
+                            <div
+                                class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
+                                <img src="{% static 'img/Category-icons/oil.png' %}" alt="flower" class="img-fluid">
+                            </div>
+                            <a href="#" class="text-dark fs-sm text-decoration-none fw-bold d-block mt-3">Edible Oil</a>
+                            <span class="total-count position-relative ps-3 fs-sm fw-medium ">5
+                                Items</span>
+
+                        </div>
+                        <div
+                            class="cat-animated-icon px-5 py-4 text-center border rounded-3 position-relative overflow-hidden color-5">
+                            <div
+                                class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
+                                <img src="{% static 'img/Category-icons/cleaning.png' %}" alt="flower"
+                                    class="img-fluid">
+                            </div>
+                            <a href="#" class="text-dark fs-sm text-decoration-none fw-bold d-block mt-3">Cleaning</a>
+                            <span class="total-count position-relative ps-3 fs-sm fw-medium ">5
+                                Items</span>
+                        </div>
+
+                        <div
+                            class="cat-animated-icon px-5 py-4 text-center border rounded-3 position-relative overflow-hidden color-3">
+                            <div
+                                class="animated-icon d-inline-flex align-items-center justify-content-center rounded-circle position-relative">
+                                <img src="{% static 'img/Category-icons/ready-to-eat.png' %}" alt="flower"
+                                    class="img-fluid">
+                            </div>
+                            <a href="#" class="text-dark text-decoration-none fs-sm fw-bold d-block mt-3">Ready To
+                                Eat</a>
+                            <span class="total-count text-muted position-relative ps-3 fs-small fw-medium ">5
+                                Items</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notification toast message -->
+    <div class="fm-toast success" style="left: 50%;">
+        <div class="fm-toast-wrapper">
+            <div class="fm-toast-prefix d-flex">
+                <img src="{% static 'img/icons/check.png' %}" width="20px" height="20px">
+            </div>
+            <div class="fm-toast-content">Added to cart
+            </div>
+            <div class="fm-toast-suffix">
+                <a href="#" id="view_cart_link" class="fm-btn small">
+                    View
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- ----product-- -->
+    <section class-="deal-section">
+        <div class="container-fluid my-3">
+            <div class="row">
+                <div class="col-md-12 mb-3 d-flex justify-content-between align-items-center">
+                    <h2 class="text-dark fw-bold"><span class="text-success">Trending</span> Products</h2>
+                    <div class="title_inner_wrap d-flex align-items-center column-gap-3">
+                        <div class="deal_product_heading">
+                            <ul class="contdown_row d-flex justify-content-center align-items-center column-gap-2 m-0">
+                                <span class="count-heading">Hurry up !! offer end in</span>
+                                <li class="countdown_section">
+                                    <span id="days" class="countdown_timer">152</span>
+                                    <span class="countdown_title">Day</span>
+                                </li>
+                                <li class="countdown_section">
+                                    <span id="hours" class="countdown_timer">10</span>
+                                    <span class="countdown_title">Hour</span>
+                                </li>
+                                <li class="countdown_section">
+                                    <span id="minutes" class="countdown_timer">34</span>
+                                    <span class="countdown_title">Min</span>
+                                </li>
+                                <li class="countdown_section">
+                                    <span id="seconds" class="countdown_timer">13</span>
+                                    <span class="countdown_title">Sec</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <script>
+                            const second = 1000,
+                                minute = second * 60,
+                                hour = minute * 60,
+                                day = hour * 24;
+                            let countDown = new Date('September 5, 2024 00:00:00').getTime(),
+                                x = setInterval(function () {
+                                    let now = new Date().getTime(),
+                                        distance = countDown - now;
+                                    document.getElementById('days').innerText = Math.floor(distance / (day)),
+                                        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+                                        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+                                        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+                                    if (distance <= 0) {
+                                        clearInterval(x); // Stop the countdown
+                                        document.querySelector('.deal_product_heading').style.display = 'none'; // Hide the countdown element
+                                    }
+                                }, second)
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="vertical-img">
+                        <img src="{% static 'img/banner-img/adv-Homey-bee.jpg' %}" height="350px" alt="">
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="owl-carousel owl-theme product-wrapper" id="adv-slider">
+                        {% for i in trending_products %}
+                        <div class="item py-3">
+                            <div class="card rounded-4 position-relative product-card-list">
+                                {% if i.product_discountprice < i.product_orginalprice %}
+                                    <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">{{i.product_priceoff}}% OFF</span>
+                                {% endif %}
+                                <span class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                        class="fa-regular fa-heart"></i></span>
+                                <a href="{% url 'product-details' %}">
+                                    {% if i.product_img %}
+            
+                                    <img src="{{i.product_img.url}}" alt="" class="img-fluid product-card-img">
+                                    {% endif %}
+            
+                                </a>
+                                <div class="card-body product-body pt-0">
+                                    <h6 class="card-title product-name fw-bold text-truncate">{{i.product_name}} </h6>
+                                    {% comment %} <h6 class="card-title product-name fw-bold text-truncate">
+                                        {{i.product_category}} </h6> {% endcomment %}
+            
+                                    <div
+                                        class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                        <span class="product-weight small m-0">{{i.product_weight}}</span>
+                                        <div class="product-meta d-flex justify-content-start">
+                                            <div class="product-available in-stock">{{i.product_available}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                    <h6 class="fw-bold m-0">
+                                        ₹
+                                        {% if i.product_discountprice < i.product_orginalprice %}
+                                            {{ i.product_discountprice }} <del class="text-muted small fw-normal">₹{{ i.product_orginalprice }}</del>
+                                        {% else %}
+                                            {{ i.product_discountprice }}
+                                        {% endif %}
+                                    </h6>
+                                    <a href="#" class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                        tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                    <div
+                                        class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                        <button class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                class="fa-light fa-minus fw-bold"></i></button>
+                                        <div class="qty-count"></div>
+                                        <button class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                class="fa-light fa-plus fw-bold"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <p>No products available.</p>
+                        {% endfor %}
+                        
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-12 ">
+                    <img src="{% static 'img/banner-img/adver-banner-4.jpg' %}" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -----main-product-section -->
+    <section class="featured-section">
+        <div class="container-fluid my-3">
+            <div class="row">
+                <div class="col-md-12 flex-wrap featured-title d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="text-dark position-relative fw-bold">Featured <span class="text-success">Product</span>
+                    </h2>
+                    <div class="tabs-section">
+                        <ul class="nav nav-pills " id="tab-tab">
+                            <li class="nav-item">
+                                <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all"
+                                    aria-selected="true">All<span
+                                        class="total-count position-relative ps-1 fs-sm fw-medium">(12)</span></button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" id="pills-fruits-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-fruits" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">Fruits<span
+                                        class="total-count position-relative ps-1 fs-sm fw-medium">(6)</span></button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" id="pills-dairy-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-dairy" type="button" role="tab" aria-controls="pills-contact"
+                                    aria-selected="false">Dairy & Bakery<span
+                                        class="total-count position-relative ps-1 fs-sm fw-medium">(3)</span></button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" id="pills-drinks-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-drinks" type="button" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false">Drinks<span
+                                        class="total-count position-relative ps-1 fs-sm fw-medium">(5)</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-all" aria-labelledby="pills-all-tab">
+                        <div
+                            class="row justify-content-center row-cols-xxl-6 row-cols-xl-4 row-cols-md-3 row-cols-sm-2  g-3 g-xl-4">
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">5%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/banana.png' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Banana </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">1kg</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹52 <del
+                                                    class="text-muted small fw-normal">₹65</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/parle-g-biscuits.webp' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Parle-G Original
+                                                Glucose Biscuits </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">800g</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹95
+                                                <del class="text-muted small fw-normal">₹100</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">2%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/sunfeast-dark-fantasy.jpg' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Sunfeast Dark
+                                                Fantasy Original Choco Filled Cookie</h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">275g</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹105 <del
+                                                    class="text-muted small fw-normal">₹170</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/maaza-mango-drink.jpg' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Maaza Mango Drink
+                                            </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">1.2L</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹69 <del
+                                                    class="text-muted small fw-normal">₹75</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/kiwi.png' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Kiwi </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">3 pcs.</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹119
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/mother-s-recipe-mixed-pickle-500-g.webp' %}"
+                                                alt="" class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Mother's Recipe
+                                                Mixed Pickle
+                                            </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">500g</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹99 <del
+                                                    class="text-muted small fw-normal">₹149</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">5%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/yogabar-blueberry-pie-protein-bar-50-g.webp' %}"
+                                                alt="" class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Yogabar Blueberry
+                                                Pie Protein Bar </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">50g</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹30 <del
+                                                    class="text-muted small fw-normal">₹60</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/hell-classic-energy-drink.webp' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Hell Classic
+                                                Energy Drink 250 ml
+                                            </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">250ml</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹49 <del
+                                                    class="text-muted small fw-normal">₹60</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/saffola-classic-instant-masala-oats-38-g.webp' %}"
+                                                alt="" class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Saffola Classic
+                                                Instant Masala Oats
+                                            </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">38 g</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹16 <del
+                                                    class="text-muted small fw-normal">₹17</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">5%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/bournvita-750-g.webp' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Bournvita</h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">1kg</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹343 <del
+                                                    class="text-muted small fw-normal">₹397</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">5%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/monster-energy-drink-350-ml.webp' %}"
+                                                alt="" class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Monster Energy
+                                                Drink </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">350ml</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹105 <del
+                                                    class="text-muted small fw-normal">₹125</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">5%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/kellogg-s-fruit-nut-seeds-muesli-750-g.webp' %}"
+                                                alt="" class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Kellogg's Fruit,
+                                                Nut & Seeds Muesli </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">750g</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹390 <del
+                                                    class="text-muted small fw-normal">₹499</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-fruits" aria-labelledby="pills-fruits-tab">
+                        <div
+                            class="row justify-content-center row-cols-xxl-6 row-cols-xl-4 row-cols-md-3 row-cols-sm-2  g-3 g-xl-4">
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">5%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/apple-royal-gala-1-kg.webp' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Apple Royal Gala
+                                            </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">1kg</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹299
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/grapes.png' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Grapes </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">500g</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹138
+                                                <del class="text-muted small fw-normal">₹177</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">2%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/watermelon.png' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Watermelon</h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">1kg</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹38 <del
+                                                    class="text-muted small fw-normal">₹40</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/muskmelon.webp' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Muskmelon </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">700g</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹49 <del
+                                                    class="text-muted small fw-normal">₹55</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/kiwi.png' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Kiwi </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">3 pcs.</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹119
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/avagado.png' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Avocado-Imported
+                                            </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">1 pcs.</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹69 <del
+                                                    class="text-muted small fw-normal">₹93</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-dairy" aria-labelledby="pills-dairy-tab">
+                        <div
+                            class="row justify-content-center row-cols-xxl-6 row-cols-xl-4 row-cols-md-3 row-cols-sm-2  g-3 g-xl-4">
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">5%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/amul-butter-100-g.webp' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Amul Butter </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">100g</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹56 <del
+                                                    class="text-muted small fw-normal">₹58</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/amul-taaza-homogenised-toned-milk-1-l.webp' %}"
+                                                alt="" class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Amul Taaza
+                                                Homogenised Toned Milk </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">1L</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹71
+                                                <del class="text-muted small fw-normal">₹74</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">2%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/amul-gold-homogenised-standardised-milk-1-l.webp' %}"
+                                                alt="" class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Amul Gold
+                                                Homogenised Standardised Milk</h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">1L</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹77 <del
+                                                    class="text-muted small fw-normal">₹80</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">2%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/britannia-gobbles.jpg' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Britannia Gobbles
+                                                Fruity Fun Cake</h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">60g</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹20 <del
+                                                    class="text-muted small fw-normal">₹25</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">2%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/mavee-american.webp' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Mavee - American
+                                                Sponge Brownie Premix Eggless</h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">1kg</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹280 <del
+                                                    class="text-muted small fw-normal">₹500</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">2%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/rusk.webp' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Parle Real Elaichi
+                                                Premium Rusk</h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">290g</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹37 <del
+                                                    class="text-muted small fw-normal">₹55</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-drinks" aria-labelledby="pills-drinks-tab">
+                        <div
+                            class="row justify-content-center row-cols-xxl-6 row-cols-xl-4 row-cols-md-3 row-cols-sm-2  g-3 g-xl-4">
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/maaza-mango-drink.jpg' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Maaza Mango Drink
+                                            </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">1.2L</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹69 <del
+                                                    class="text-muted small fw-normal">₹75</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">5%
+                                            OFF</span>
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/monster-energy-drink-350-ml.webp' %}"
+                                                alt="" class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Monster Energy
+                                                Drink </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">350ml</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹105 <del
+                                                    class="text-muted small fw-normal">₹125</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item">
+                                    <div class="card rounded-4 position-relative product-card-list">
+                                        <span
+                                            class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                                class="fa-regular fa-heart"></i></span>
+                                        <a href="{% url 'product-details' %}"><img
+                                                src="{% static 'img/Products/hell-classic-energy-drink.webp' %}" alt=""
+                                                class="img-fluid product-card-img"></a>
+                                        <div class="card-body product-body pt-0">
+                                            <h6 class="card-title product-name fw-bold text-truncate">Hell Classic
+                                                Energy Drink 250 ml
+                                            </h6>
+                                            <div
+                                                class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                                <span class="product-weight small m-0">250ml</span>
+                                                <div class="product-meta d-flex justify-content-start">
+                                                    <div class="product-available in-stock">In Stock</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                            <h6 class="fw-bold m-0">₹49 <del
+                                                    class="text-muted small fw-normal">₹60</del>
+                                            </h6>
+                                            <a href="#"
+                                                class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                                tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                            <div
+                                                class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                                <button
+                                                    class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                                        class="fa-light fa-minus fw-bold"></i></button>
+                                                <div class="qty-count"></div>
+                                                <button
+                                                    class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                                        class="fa-light fa-plus fw-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---------carousel-banner -->
+    <section class="mt-4">
+        <div class="container-fluid banner-ft">
+            <div class="row justify-content-center row-cols-xl-3 row-cols-md-2 row-cols-sm-1 row-cols-auto g-3">
+                <div class="col">
+                    <div class="item">
+                        <div class="card">
+                            <img src="{% static 'img/banner-img/slide-banner-img-10.webp' %}" class="card-img-top">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item">
+                        <div class="card">
+                            <img src="{% static 'img/banner-img/slide-banner-img-19.webp' %}" class="card-img-top">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item">
+                        <div class="card">
+                            <img src="{% static 'img/banner-img/slide-banner-img-20.webp' %}" class="card-img-top">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------New Product Arrival demo card-- -->
+    <section>
+        <div class="container-fluid my-3">
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="text-dark fw-bold">New Product <span class="text-success">Arrivals</span></h2>
+                    <div class="view-content align-items-center">
+                        <a href="#" class="view-all text-decoration-none">View all</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="row justify-content-center row-cols-xxl-6 row-cols-xl-4 row-cols-md-3 row-cols-sm-2  g-3 g-xl-4">
+                {% block content %}
+                {% for i in new_arrivals %}
+                <div class="col">
+                    <div class="item py-3">
+                        <div class="card rounded-4 position-relative product-card-list">
+                            {% if i.product_discountprice < i.product_orginalprice %}
+                                <span class="badge rounded-0 rounded-pill fw-bold my-2 position-absolute">{{i.product_priceoff}}% OFF</span>
+                            {% endif %}
+                            <span class="product-card-wish rounded-0 rounded-pill fw-bold my-2 position-absolute"><i
+                                    class="fa-regular fa-heart"></i></span>
+                            <a href="{% url 'product-details' %}">
+                                {% if i.product_img %}
+
+                                <img src="{{i.product_img.url}}" alt="" class="img-fluid product-card-img">
+                                {% endif %}
+
+                            </a>
+                            <div class="card-body product-body pt-0">
+                                <h6 class="card-title product-name fw-bold text-truncate">{{i.product_name}} </h6>
+                                {% comment %} <h6 class="card-title product-name fw-bold text-truncate">
+                                    {{i.product_category}} </h6> {% endcomment %}
+
+                                <div
+                                    class="card-qty-details d-flex justify-content-between align-items-center gap-5 overflow-hidden">
+                                    <span class="product-weight small m-0">{{i.product_weight}}</span>
+                                    <div class="product-meta d-flex justify-content-start">
+                                        <div class="product-available in-stock">{{i.product_available}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="card-footer bg-transparent border-0 d-flex align-items-center justify-content-between pt-0 pb-3">
+                                <h6 class="fw-bold m-0">
+                                    ₹
+                                    {% if i.product_discountprice < i.product_orginalprice %}
+                                        {{ i.product_discountprice }} <del class="text-muted small fw-normal">₹{{ i.product_orginalprice }}</del>
+                                    {% else %}
+                                        {{ i.product_discountprice }}
+                                    {% endif %}
+                                </h6>
+                                <a href="#" class="product-add btn btn-outline-success btn-sm rounded-3 fw-bold px-2"
+                                    tabindex="-1"><i class="fa-solid fa-plus"></i> ADD</a>
+                                <div
+                                    class="qty-items-count position-relative  justify-content-end align-items-center rounded-pill">
+                                    <button class="qnt-minus d-flex justify-content-center align-items-center "><i
+                                            class="fa-light fa-minus fw-bold"></i></button>
+                                    <div class="qty-count"></div>
+                                    <button class="qnt-plus d-flex justify-content-center align-items-center  "><i
+                                            class="fa-light fa-plus fw-bold"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <p>No products available.</p>
+                {% endfor %}
+                {% endblock %}
+
+            </div>
+        </div>
+    </section>
+
+    <!-- -------Banner-Advertise--- -->
+    <section>
+        <div class="container-fluid mb-4">
+            <div class="row text-center">
+                <div class="col-md-12 ">
+                    <img src="{% static '/img/banner-img/long-banner.webp' %}" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -----footer-section -->
+    <section class="footer-mart  rounded-top-4">
+        <div class="container-fluid text-light">
+            <div class="row px-2">
+                <div class="col-lg-3 col-md-3 py-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="me-1" href="#">
+                                <img src="{% static 'img/logo/FreshMart-new(1).svg' %}" alt="Logo" height="32px"
+                                    class="d-inline-block align-text-top">
+                            </a>
+                        </div>
+                        <div class="col-md-12 py-3">
+                            <p class="fs-small ">Welcome to FreshMart! We are dedicated to providing the freshest
+                                produce and quality groceries at great prices. Our commitment to sustainability and
+                                community ensures that you always get the best. </p>
+                            <div class="foot-social">
+                                <img src="{% static 'img/social-icons/fb.png' %}" width="24px" height="24" alt="">
+                                <img src="{% static 'img/social-icons/instagram.png' %}" width="24px" height="24"
+                                    alt="">
+                                <img src="{% static 'img/social-icons/whatsapp.png' %}" width="24px" height="24" alt="">
+                                <img src="{% static 'img/social-icons/twitter.png' %}" width="24px" height="24" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2 my-5">
+                    <div class="row">
+                        <div class="col-md-12 position-relative">
+                            <h6 class="foot-light-head text-uppercase">Category</h6>
+                        </div>
+                        <div class="col-md-12 foot-content d-flex flex-column gap-2 fs-small pt-3">
+                            <a class="text-decoration-none text-light" href="#">Fresh Fruits</a>
+                            <a class="text-decoration-none text-light" href="#">Drink & Juices</a>
+                            <a class="text-decoration-none text-light" href="#">Dairy & Bakery</a>
+                            <a class="text-decoration-none text-light" href="#">Toy's & Games</a>
+                            <a class="text-decoration-none text-light" href="#">Cleaning Essentials</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 my-5">
+                    <div class="row">
+                        <div class="col-md-12 position-relative">
+                            <h6 class="foot-light-head text-uppercase">Quick Link</h6>
+                        </div>
+                        <div class="col-md-12 foot-content d-flex flex-column gap-2 fs-small pt-3">
+                            <a class="text-decoration-none text-light" href="#">Abous us</a>
+                            <a class="text-decoration-none text-light" href="{% url 'contact-us' %}">Contact us</a>
+                            <a class="text-decoration-none text-light" href="#">Faq</a>
+                            <a class="text-decoration-none text-light" href="#">Team &amp; Condtion</a>
+                            <a class="text-decoration-none text-light" href="#">Privacy &amp; Policy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 my-5">
+                    <div class="row">
+                        <div class="col-md-12 position-relative">
+                            <h6 class="foot-light-head text-uppercase">Quick Link</h6>
+                        </div>
+                        <div class="col-md-12 foot-content d-flex flex-column gap-2 fs-small pt-3">
+                            <a class="text-decoration-none text-light" href="#">Abous us</a>
+                            <a class="text-decoration-none text-light" href="{% url 'contact-us' %}">Contact us</a>
+                            <a class="text-decoration-none text-light" href="#">Faq</a>
+                            <a class="text-decoration-none text-light" href="#">Team &amp; Condtion</a>
+                            <a class="text-decoration-none text-light" href="#">Privacy &amp; Policy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 my-5">
+                    <div class="row">
+                        <div class="col-md-12 position-relative">
+                            <h6 class="foot-light-head text-uppercase">Get in Touch</h6>
+                        </div>
+                        <div class="col-md-12 pt-3">
+                            <span class="fs-small fw-semibold"><i class="fa-regular fa-location-dot"></i> Address :
+                            </span>
+                            <span class="mt-5 fs-sm" style="font-size: 12px;">B.I.T Mesra Ranchi, Jharkhand 834001
+                                India</span>
+                        </div>
+                        <div class="col-md-12 pt-2">
+                            <span class="fs-small fw-semibold"><i class="fa-regular fa-phone"></i> Call us : </span>
+                            <span class="mt-5 fs-sm" style="font-size: 12px;">(+91) 0000-000-0000</span>
+                        </div>
+                        <div class="col-md-12 pt-2">
+                            <span class="fs-small fw-semibold"><i class="fa-regular fa-envelope"></i> Email : </span>
+                            <span class="mt-5 fs-sm" style="font-size: 12px;">Contact@freshmart.com</span>
+                        </div>
+                        <div class="col-md-12 pt-2">
+                            <span class="fs-small fw-semibold"><i class="fa-regular fa-alarm-clock"></i> Hours : </span>
+                            <span class="mt-5 fs-sm" style="font-size: 12px;">10:00 - 10:00, Mon - Sun</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-copyright text-center">
+                    <p class="" style="font-size: 12px;">© 2024 Fresh Mart - Online Grocery Store - Designed With <i
+                            class="fa-solid fa-heart red-heart"></i> All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ------Login/SignUp-Model -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h1 class="modal-title login-heading text-center fs-5" id="exampleModalLabel">Login</h1>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    {% include "messages.html" %}
+                    <div class="row login p-3">
+                        <div class="col-md-6">
+                            <form method="POST" action="{% url 'login' %}">
+                                {% csrf_token %}
+                                <div class="col-md-12 mt-0">
+                                    <label class="form-label">Username:<span class="text-danger">*</span></label>
+                                    <input type="text" name="username" required placeholder="Username/Email-id"
+                                        class="form-control">
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <label class="form-label">Password:<span class="text-danger">*</span></label>
+                                    <input type="text" name="password" required placeholder="Password"
+                                        class="form-control">
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <button name="login" type="submit" class="btn btn-sm btn-primary">Login</button>
+                                    <button type="register" class="btn btn-sm btn-success regist">Register</button>
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <a href="/" class="text-dark text-decoration-underline">Forgot Password</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="{% static 'img/icons/banner7.png' %}" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="row register p-3">
+                        <div class="col-md-6">
+                            <form action="{% url 'register' %}" method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="col-md-12 mt-0">
+                                    <label class="form-label">Name:<span class="text-danger">*</span></label>
+                                    <input type="text" name="name" required placeholder="Enter Your Name"
+                                        class="form-control">
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <label class="form-label">Username<span
+                                            class="text-danger text-bold">*</span></label>
+                                    <input type="text" required placeholder="Enter Your Username" name="username"
+                                        class="form-control">
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <label class="form-label">Email Id:<span class="text-danger">*</span></label>
+                                    <input type="email" name="email" required
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                        placeholder="Enter your Email id" class="form-control">
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <label class="form-label">password:<span class="text-danger">*</span></label>
+                                    <input type="password" name="password" required placeholder="Enter your password"
+                                        class="form-control">
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <label class="form-label">Mobile No:<span class="text-danger">*</span></label>
+                                    <input type="text" maxlength="10" name="mobile" required
+                                        placeholder="Enter your Mobile No." class="form-control">
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+                                            required>
+                                        <label class="form-check-label text-muted" for="invalidCheck">
+                                            <P style="font-size: 14px; text-align: center;">Agree to terms and
+                                                conditions
+                                            </P>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <button name="register" type="submit" class="btn btn-sm btn-success">Submit</button>
+                                    <button type="submit" class="btn btn-sm btn-secondary go-back">Go Back</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="{% static 'img/icons/banner-girl.png' %}" height="300px">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delivery Location Modal -->
+    <div class="modal fade loc-search-modal" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header pb-0">
+                    <div>
+                        <h5 class="modal-title fw-bold" id="locationModalLabel">Choose your Delivery Location</h5>
+                        <p class="fs-7 text-muted">Enter your address and we will specify the offer available in your
+                            area.</p>
+                    </div>
+                    <button type="button" class="btn-close pe-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Search Input -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search Location"
+                            aria-label="Search Location">
+                    </div>
+                    <!-- Select Location Header -->
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="fw-bold">Select Location</span>
+                    </div>
+                    <!-- Locations List -->
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Vikash</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Irba</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">BIT Mesra Inner
+                            campus</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">BIT More</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Booty More</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Bariatu Housing
+                            Colony</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----JQuery-js---- -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- ----Owl Carousel-js---- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- ----Bootstrap-js---- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- custom css -->
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+
+</html>

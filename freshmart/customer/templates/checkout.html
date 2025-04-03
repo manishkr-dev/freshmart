@@ -1,0 +1,575 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static '/img/favicon/favicon.png' %}">
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- FontAwsome Icon css -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- owl carousel Theme css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.css">
+</head>
+
+<body>
+    <!-- -----Top-bar---- -->
+    <!-- <section class="top-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class=" top-bar-main col-lg-12 d-flex justify-content-between d-none d-lg-flex fw-semibold">
+                    <div class="col-md-4">
+                        <div class="col-md-12">
+                            <div class="top-links d-flex flex-row">
+                                <a class="text-dark" href="about-us.html">About us</a>
+                                <a class="text-dark" href="{% url 'my-account' %}">My Account</a>
+                                <a class="text-dark" href="{% url 'wishlist' %}">Wishlist</a>
+                                <a class="text-dark" href="{% url 'contact-us' %}">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 d-flex justify-content-center align-items-center ">
+                            <span><b>Working time:</b> Mon - SUN : 10:00AM - 7:00PM</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12 d-flex justify-content-end align-items-center">
+                                <span>Need help? Call Us:+ 1800 900 888 |&nbsp;</span>
+                                <span>Faq</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ------Navbar------ -->
+    <section>
+        <nav class="navbar navbar-expand-lg ft-nav-mart bg-white">
+            <div class="container-fluid">
+                <a class="navbar-brand me-1" href="/">
+                    <img src="{% static 'img/logo/FreshMart-new.svg' %}" alt="Logo" height="32px"
+                        class="d-inline-block align-text-top">
+                </a>
+                <a href="#" class="top-location text-decoration-none text-dark p-2 gap-1 d-none d-sm-flex"
+                    data-bs-toggle="modal" data-bs-target="#locationModal">
+                    <i class="fa-solid fa-location-dot d-flex align-items-center fs-4 location-icon"></i>
+                    <div class="top-location-content lh-sm">
+                        <h6 class="fw-bold mb-0">Delivered to</h6>
+                        <span class="text-muted text-truncate d-inline-block loc-span">H.No.
+                            2434 Street, 784 Sector, Noida, Up</span>
+                    </div>
+                </a>
+                <div
+                    class="input-group bg-white rounded-5 search-bd-bg border py-1 top-search-bar d-none d-lg-flex mx-3">
+                    <a href="#" class="input-group-text text-decoration-none bg-transparent border-0 rounded-0 px-3"><i
+                            class="fa-regular fa-magnifying-glass"></i></a>
+                    <input type="text" class="form-control bg-transparent border-0 rounded-0 ps-0"
+                        placeholder="Search for items..." name="Search" aria-label="Search for items...">
+                </div>
+                <!-- <div
+                    class=" input-group bg-white rounded-5 search-bd-bg border py-1 top-search-bar d-none d-lg-flex mx-3">
+                    <input type="text" class="form-control bg-transparent border-0 rounded-0 ps-4"
+                        placeholder="Search for items..." aria-label="Search for items..." name="Search">
+                    <a href="#" class="btn btn-success rounded-pill me-1"><i class="fa-regular fa-magnifying-glass"></i> Search</a>
+                </div> -->
+                <div class="icons-main-color num-count-header d-flex justify-content-between ms-auto ">
+                    <a href="#" class="input-group-text text-decoration-none bg-transparent border-0 rounded-0 px-3"><i
+                            class="fa-regular fa-circle-user  d-flex fs-lg-3 fs-4"></i></a>
+                    <a href="{% url 'wishlist' %}"
+                        class=" num-count-btn input-group-text position-relative text-decoration-none bg-transparent border-0 rounded-0 px-3"><i
+                            class="fa-regular fa-heart d-flex fs-lg-3 fs-4"></i><span
+                            class="item-count num-count">0</span></a>
+                    <div class="mart-cart d-flex">
+                        <a href="{% url 'cart' %}"
+                            class="num-count-btn input-group-text position-relative text-decoration-none bg-transparent border-0 rounded-0 align-items-center px-3"><i
+                                class="fa-regular fa-cart-shopping d-flex fs-lg-3 fs-4 pb-1"></i><span
+                                class="item-count num-count">0</span><span
+                                class="text-center align-items-center d-none d-block ps-1 fw-semibold ">My
+                                Cart</span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- --------current-loc-bar--- -->
+        <div class="container-fluid p-0">
+            <a href="#"
+                class="loc-mob-view text-decoration-none text-dark d-sm-none d-flex  align-items-center p-2 gap-1"
+                data-bs-toggle="modal" data-bs-target="#locationModal">
+                <i class="fa-solid fa-location-dot d-flex align-items-center fs-4 location-icon"></i>
+                <div class="mob-view-content lh-sm">
+                    <p class="fw-bold mb-0">Current location</p>
+                    <span class="text-muted d-inline-block loc-span">H.No.
+                        2434 Street, 784 Sector, Noida, Up</span>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- -----Navbar-Menu--- -->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-default second-nav-mart py-0">
+            <div class="container-fluid px-0 px-md-3">
+                <div class="dropdown me-3 d-none d-lg-block">
+                    <button class="btn nav-mart-btn d-flex align-items-center rounded-pill border-0 text-white show"
+                        type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                        <i class="fa-regular fa-grid-2 d-flex align-items-center pe-1"></i> All categories
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" data-bs-popper="static">
+                        <li><a class="dropdown-item" href="listing.html"></a></li>
+                        <li><a class="dropdown-item" href="listing.html">Chips & Namkeens</a></li>
+                        <li><a class="dropdown-item" href="listing.html">Choclates & Candies</a></li>
+                        <li><a class="dropdown-item" href="listing.html">Drinks & Juices</a></li>
+                        <li><a class="dropdown-item" href="listing.html">Dairy & Bakery</a></li>
+                        <li><a class="dropdown-item" href="listing.html">Tea & Coffee</a></li>
+                        <li><a class="dropdown-item" href="listing.html">Hair & Care</a></li>
+                    </ul>
+                </div>
+                <div class="offcanvas offcanvas-start p-4 p-lg-0" id="navbar-default">
+                    <div class="d-flex justify-content-between align-items-center mb-2 d-block d-lg-none">
+                        <a class="navbar-brand m-0 d-lg-block flex-shrink-0" href="/">
+                            <!-- <img src="img/logo.png" alt="" class="img-fluid logo-img d-none d-lg-block">
+                            <img src="img/icon.png" alt="" class="img-fluid logo-img d-lg-none"> -->
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="d-block d-lg-none">
+                        <form action="#">
+                            <div
+                                class="input-group bg-white top-search-bar border rounded-pill align-items-center py-1 ps-2">
+                                <input type="text" class="form-control bg-transparent border-0 rounded-0"
+                                    placeholder="Search items" aria-label="Search items">
+                                <a href="#" class="btn btn-danger rounded-pill me-1"><i
+                                        class="fa-regular fa-magnifying-glass me-1"></i>
+                                    Search</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-block d-lg-none mb-3">
+                        <a class="btn btn-danger d-flex align-items-center rounded-pill w-100" data-bs-toggle="collapse"
+                            href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="fa-regular fa-grid-2 d-flex me-1"></i> All Departments
+                        </a>
+                        <div class="collapse mt-2" id="collapseExample">
+                            <div class="card card-body">
+                                <ul class="mb-0 list-unstyled">
+                                    <li><a class="dropdown-item" href="listing.html">Dairy, Bread &amp; Eggs</a></li>
+                                    <li><a class="dropdown-item" href="listing.html">Snacks &amp; Munchies</a></li>
+                                    <li><a class="dropdown-item" href="listing.html">Fruits &amp; Vegetables</a></li>
+                                    <li><a class="dropdown-item" href="listing.html">Cold Drinks &amp; Juices</a></li>
+                                    <li><a class="dropdown-item" href="listing.html">Breakfast &amp; Instant Food</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="listing.html">Bakery &amp; Biscuits</a></li>
+                                    <li><a class="dropdown-item" href="listing.html">Chicken, Meat &amp; Fish</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block">
+                        <ul class="navbar-nav align-items-center text-white ">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/" role="button">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- <li><a class="dropdown-item" href="about.html">About us</a></li> -->
+                                    <li><a class="dropdown-item" href="{% url 'wishlist' %}">Wishlist</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'cart' %}">Cart</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'checkout' %}">Checkout</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'contact-us' %}">Contact-us</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Account
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="signin.html">Login</a></li>
+                                    <li><a class="dropdown-item" href="signup.html">Signup</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'my-account' %}"> My Account</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- Delivery Location Modal -->
+    <div class="modal fade loc-search-modal" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header pb-0">
+                    <div>
+                        <h5 class="modal-title fw-bold" id="locationModalLabel">Choose your Delivery Location</h5>
+                        <p class="fs-7 text-muted">Enter your address and we will specify the offer available in your
+                            area.</p>
+                    </div>
+                    <button type="button" class="btn-close pe-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Search Input -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search Location"
+                            aria-label="Search Location">
+                    </div>
+                    <!-- Select Location Header -->
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="fw-bold">Select Location</span>
+                    </div>
+                    <!-- Locations List -->
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Vikash</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Irba</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">BIT Mesra Inner
+                            campus</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">BIT More</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Booty More</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Bariatu Housing
+                            Colony</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container-fluid">
+            <div class="row  my-3 mx-1">
+                <div class="breadcrumb-area py-5">
+                    <h2 class="breadcrumb-title text-center fw-bolder">Checkout</h2>
+                    <nav style=" --bs-breadcrumb-divider:'>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center align-items-center text-center ">
+                            <li class="breadcrumb-item "><a class="text-decoration-none text-dark fw-semibold "
+                                    href="/"><i class="fa-regular fa-house"></i> Home</a></li>
+                            <li class="breadcrumb-item active fw-semibold" aria-current="page"><a class="text-decoration-none text-dark fw-semibold "
+                                href="{% url 'cart' %}">Cart</a></li>
+                            <li class="breadcrumb-item active fw-semibold" aria-current="page">Checkout</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---whishlist-card -->
+    <section>
+        <div class="container-fluid">
+            <div class="row my-3 mx-1 border rounded-4 p-4">
+                <div class="col-md-8 pe-4 ">
+                    <div class="flex-crum d-flex justify-content-between align-items-center mb-3">
+                        <h3 class="fs-5 m-0 fw-bold">Billing Details</h3>
+                    </div>
+                    <div class="d-flex gap-4">
+                        <div class="mb-3 w-50">
+                            <label for="fm-fname" class="form-label fs-small">First Name <span
+                                    class="text-danger fs-5">*</span></label>
+                            <input type="text" class="form-control" id="fm-fname" required
+                                placeholder="Enter First Name">
+                        </div>
+                        <div class="mb-3 w-50">
+                            <label for="fm-lname" class="form-label fs-small">Last Name <span
+                                    class="text-danger fs-5">*</span></label>
+                            <input type="text" class="form-control" id="fm-lname" required
+                                placeholder="Enter Last Name">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-4">
+                        <div class="mb-3 w-50">
+                            <label for="fm-phone" class="form-label fs-small">Phone No. <span
+                                    class="text-danger fs-5">*</span></label>
+                            <input type="number" class="form-control" id="fm-phone" required
+                                placeholder="+91 000-000-0000">
+                        </div>
+                        <div class="mb-3 w-50">
+                            <label for="fm-email" class="form-label fs-small">Email Address <span
+                                    class="text-danger fs-5">*</span></label>
+                            <input type="email" class="form-control" id="fm-email" required
+                                placeholder="User@gmail.com">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fm-address" class="form-label fs-small">Address <span
+                                class="text-danger fs-5">*</span></label>
+                        <input type="text" class="form-control" id="fm-address" required
+                            placeholder="Enter Address here">
+                    </div>
+                    <div class="d-flex gap-4">
+                        <div class="mb-3 w-50">
+                            <label for="fm-city" class="form-label fs-small">City <span
+                                    class="text-danger fs-5">*</span></label>
+                            <input type="text" class="form-control" id="fm-city" required placeholder="City/Town">
+                        </div>
+                        <div class="mb-3 w-50">
+                            <label for="fm-postal" class="form-label fs-small">Postal Code<span
+                                    class="text-danger fs-5">*</span></label>
+                            <input type="number" class="form-control" id="fm-postal" required
+                                placeholder="Postal Code/Zip">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fm-additional" class="form-label fs-small">Additional Information (Optional)</label>
+                        <textarea class="form-control"
+                            placeholder="Notes about your order, e.g. special notes for delivery." id="fm-additional"
+                            rows="3"></textarea>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout col-md-4 position-relative">
+                    <div class="position-sticky" style="top: 20px;">
+                        <div class="step-progress">
+                            <div class="step">
+                                <div class="circle"><img src="{% static 'img/icons/my-cart.png' %}" weight="28px"
+                                        height="28px" alt=""></div>
+                                <div class="label">Your Cart</div>
+                            </div>
+                            <div class="step active">
+                                <div class="circle"><img src="{% static 'img/icons/checkout.png' %}" weight="28px"
+                                        height="28px" alt=""></div>
+                                <div class="label">Checkout</div>
+                            </div>
+                            <div class="step">
+                                <div class="circle"><img src="{% static 'img/icons/payment.png' %}" weight="28px"
+                                        height="28px" alt=""></div>
+                                <div class="label">Successfull</div>
+                            </div>
+                        </div>
+                        <div class="flex-crum mb-3">
+                            <h3 class="fs-6 m-0 fw-bold">Order Summary</h3>
+                        </div>
+                        <div class="border rounded-4">
+                            <div class="product-cart d-flex align-items-center justify-content-start border-bottom p-3">
+                                <img src="{% static 'img/Products/banana.png' %}" width="70px" height="70px" alt="banana"
+                                    class="img-fluid product-card-img">
+                                <div class="check-meta px-2">
+                                    <h6 class="fs-6 fw-semibold mb-1 text-truncate">Banana
+                                        </h6>
+                                    <span class="product-weight small m-0">500g</span>
+                                </div>
+                                <div class="d-flex gap-3 ms-auto align-items-center check-meta-price">
+                                    <div class="qty-count"><span>X</span>1</div>
+                                    <h6 class="fw-bold m-0 px-2 product-price">₹50 <del
+                                            class="text-muted small fw-normal">₹65</del></h6>
+                                </div>
+                            </div>
+                            <div class="product-cart d-flex align-items-center justify-content-start border-bottom p-3">
+                                <img src="{% static 'img/Products/grapes.png' %}" width="70px" height="70px" alt="banana"
+                                    class="img-fluid product-card-img">
+                                <div class="check-meta px-2">
+                                    <h6 class="fs-6 fw-semibold mb-1 text-truncate">Grapesn</h6>
+                                    <span class="product-weight small m-0">1kg</span>
+                                </div>
+                                <div class="d-flex gap-3 ms-auto align-items-center check-meta-price">
+                                    <div class="qty-count"><span>X</span>1</div>
+                                    <h6 class="fw-bold m-0 px-2 product-price">₹138 <del
+                                            class="text-muted small fw-normal">₹177</del></h6>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center border-bottom p-3 ">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Radio" id="cashonDelivery"
+                                        checked>
+                                    <label class="form-check-label ms-2" for="cashonDelivery"></label>
+                                </div>
+                                <div>
+                                    <!-- title -->
+                                    <h5 class="mb-1 h6">Cash on Delivery</h5>
+                                    <p class="mb-0 small">Pay with cash when your order is delivered.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between px-3">
+                                <p class=" m-0 text-muted">MRP Total :</p>
+                                <h5 id="cart-total" class="fs-6">₹0.00</h5>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between px-3 py-1">
+                                <p class=" m-0 text-muted">Product Discount :</p>
+                                <h5 id="cart-discount" class="fs-6 text-success">- ₹0.00</h5>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between px-3 py-1">
+                                <p class=" m-0 text-muted">Delivery Fee :</p>
+                                <h5 style="color: var(--main-succces-color);" class="fs-6">FREE <del
+                                        class="text-muted small fw-normal">₹40</del></h5>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between border-bottom px-3 py-1">
+                                <p class=" m-0 text-muted">Total :</p>
+                                <h5 id="order-total" class="fs-5 fw-bolder">₹0.00</h5>
+                            </div>
+                            <div class="p-3">
+                                <a style="background-color: var(--main-succces-color);"
+                                    class="checkout-btn d-flex align-items-center justify-content-center text-decoration-none px-6 py-2 rounded text-white transition-all"
+                                    data-bs-toggle="modal" data-bs-target="#successModal" href="">Place Order <i
+                                        class="fa-regular d-inline-flex align-content-center ps-2 fa-arrow-right-long"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---Success Checkout aution---- -->
+    <audio id="checkout-sound" src="{% static 'img/order-success.mp3' %}"></audio>
+
+    <!-- ---Success Checkout Model---- -->
+    <div class="modal fade show" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-modal="true"
+        role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body px-5 text-center">
+                    <img src="{% static 'img/icons/Icon-Success.png' %}" alt="Success" width="100px" height="100px">
+                    <h6 class="mb-2">Thank you, Your order have been received !</h6>
+                    <p class="mb-4 fs-7">We'll send you a shipping confirmation email
+                        as soon as your order ships.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <div class="d-flex align-items-center gap-4">
+                        <a class="text-decoration-none border border-2 rounded px-5 py-2 rounded text-dark fs-6"
+                            href="{% url 'my-account' %}">View Order</a>
+                        <a style="background-color: var(--main-succces-color);"
+                            class="text-decoration-none px-2 py-2 rounded fs-6 text-white" href="/">Continue
+                            Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----footer-section -->
+    <section class="footer-mart  rounded-top-4">
+        <div class="container-fluid text-light">
+            <div class="row px-2">
+                <div class="col-lg-3 col-md-3 py-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="me-1" href="#">
+                                <img src="{% static 'img/logo/FreshMart-new(1).svg' %}" alt="Logo" height="32px"
+                                    class="d-inline-block align-text-top">
+                            </a>
+                        </div>
+                        <div class="col-md-12 py-3">
+                            <p class="fs-small ">Welcome to FreshMart! We are dedicated to providing the freshest
+                                produce and quality groceries at great prices. Our commitment to sustainability and
+                                community ensures that you always get the best. </p>
+                            <div class="foot-social">
+                                <img src="{% static 'img/social-icons/fb.png' %}" width="24px" height="24" alt="">
+                                <img src="{% static 'img/social-icons/instagram.png' %}" width="24px" height="24" alt="">
+                                <img src="{% static 'img/social-icons/whatsapp.png' %}" width="24px" height="24" alt="">
+                                <img src="{% static 'img/social-icons/twitter.png' %}" width="24px" height="24" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-2 my-5">
+                    <div class="row">
+                        <div class="col-md-12 position-relative">
+                            <h6 class="foot-light-head text-uppercase">Category</h6>
+                        </div>
+                        <div class="col-md-12 foot-content d-flex flex-column gap-2 fs-small pt-3">
+                            <a class="text-decoration-none text-light" href="#">Fresh Fruits</a>
+                            <a class="text-decoration-none text-light" href="#">Drink & Juices</a>
+                            <a class="text-decoration-none text-light" href="#">Dairy & Bakery</a>
+                            <a class="text-decoration-none text-light" href="#">Toy's & Games</a>
+                            <a class="text-decoration-none text-light" href="#">Cleaning Essentials</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 my-5">
+                    <div class="row">
+                        <div class="col-md-12 position-relative">
+                            <h6 class="foot-light-head text-uppercase">Quick Link</h6>
+                        </div>
+                        <div class="col-md-12 foot-content d-flex flex-column gap-2 fs-small pt-3">
+                            <a class="text-decoration-none text-light" href="#">Abous us</a>
+                            <a class="text-decoration-none text-light" href="#About">Contact us</a>
+                            <a class="text-decoration-none text-light" href="#">Faq</a>
+                            <a class="text-decoration-none text-light" href="#">Team &amp; Condtion</a>
+                            <a class="text-decoration-none text-light" href="#">Privacy &amp; Policy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 my-5">
+                    <div class="row">
+                        <div class="col-md-12 position-relative">
+                            <h6 class="foot-light-head text-uppercase">Quick Link</h6>
+                        </div>
+                        <div class="col-md-12 foot-content d-flex flex-column gap-2 fs-small pt-3">
+                            <a class="text-decoration-none text-light" href="#">Abous us</a>
+                            <a class="text-decoration-none text-light" href="#About">Contact us</a>
+                            <a class="text-decoration-none text-light" href="#">Faq</a>
+                            <a class="text-decoration-none text-light" href="#">Team &amp; Condtion</a>
+                            <a class="text-decoration-none text-light" href="#">Privacy &amp; Policy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 my-5">
+                    <div class="row">
+                        <div class="col-md-12 position-relative">
+                            <h6 class="foot-light-head text-uppercase">Get in Touch</h6>
+                        </div>
+                        <div class="col-md-12 pt-3">
+                            <span class="fs-small fw-semibold"><i class="fa-regular fa-location-dot"></i> Address :
+                            </span>
+                            <span class="mt-5 fs-sm" style="font-size: 12px;">B.I.T Mesra Ranchi, Jharkhand 834001
+                                India</span>
+                        </div>
+                        <div class="col-md-12 pt-2">
+                            <span class="fs-small fw-semibold"><i class="fa-regular fa-phone"></i> Call us : </span>
+                            <span class="mt-5 fs-sm" style="font-size: 12px;">(+91) 0000-000-0000</span>
+                        </div>
+                        <div class="col-md-12 pt-2">
+                            <span class="fs-small fw-semibold"><i class="fa-regular fa-envelope"></i> Email : </span>
+                            <span class="mt-5 fs-sm" style="font-size: 12px;">Contact@freshmart.com</span>
+                        </div>
+                        <div class="col-md-12 pt-2">
+                            <span class="fs-small fw-semibold"><i class="fa-regular fa-alarm-clock"></i> Hours : </span>
+                            <span class="mt-5 fs-sm" style="font-size: 12px;">10:00 - 10:00, Mon - Sun</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-copyright text-center">
+                    <p class="" style="font-size: 12px;">© 2024 Fresh Mart - Online Grocery Store - Designed With <i
+                            class="fa-solid fa-heart red-heart"></i> All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ----JQuery-js---- -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- ----Owl Carousel-js---- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- ----Bootstrap-js---- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- custom css -->
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+
+</html>
