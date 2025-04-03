@@ -29,9 +29,8 @@
 ### ❤️Wishlist Page
 ![Wishlist](https://github.com/user-attachments/assets/a6537e7c-1870-4e83-a30f-eeb5ce5430ce)
 
-
 ### 🛍️ Product Page
-![Wishlist](https://github.com/user-attachments/assets/a6537e7c-1870-4e83-a30f-eeb5ce5430ce)
+![Image](https://github.com/user-attachments/assets/a5a62baa-5157-40a1-ae1a-2fd9fdf7bc1a)
 
 ### 🛒 Cart Page
 ![Cart Page](https://github.com/user-attachments/assets/0bd4ddda-cdbf-4f60-8e9b-562fc174fb47)
@@ -75,10 +74,8 @@
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to fork this repository and submit a pull request with improvements or bug fixes.
+**Contributions are welcome!** Feel free to fork this repository and submit a pull request with improvements or bug fixes.
 
 ## 📜 License
 
 This project is **open-source** under the MIT License.
-
----
